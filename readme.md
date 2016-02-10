@@ -8,10 +8,10 @@ Dynamic Programming equation
 ---
 
 Some terms
-- `Neighbour`: an adjacent point (up, down, left or right)
-- `height(i,j)`: the height of the point (i,j)
-- `path(i,j)`: the length of the *longest* path that starts at a point (i,j)
-- `end(i,j)`: the height of the ending point of the longest path that starts at (i,j)
+- `Neighbour`: 		an adjacent point (up, down, left or right)
+- `height(i,j)`: 	the height of the point (i,j)
+- `path(i,j)`: 		the length of the *longest* path that starts at a point (i,j)
+- `end(i,j)`: 		the height of the ending point of the longest path that starts at (i,j)
 
 In the case of this map,
 ```
@@ -54,8 +54,8 @@ Algorithm description
 ---
 The two functions that solve the problem are `max_algorithm()` and `find_max()`.
 
- - `find_max()`: finds `path(i,j)` and `end(i,j)` for a given point (i,j) recursively and stores them
- - `max_algorithm()`: iteratively calls `find_max()` over all points that were missed by the recursion and tracks the length of the longest paths (globally) and their ending heights
+ - `find_max()`: 		finds `path(i,j)` and `end(i,j)` for a given point (i,j) recursively and stores them
+ - `max_algorithm()`: 	iteratively calls `find_max()` over all points that were missed by the recursion and tracks the length of the longest paths (globally) and their ending heights
 
 For brevity, some of the parameters are omitted in the descriptions below.
 
