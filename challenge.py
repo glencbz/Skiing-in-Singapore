@@ -21,8 +21,8 @@ def max_algorithm(ski_map):
 				starting_points = [(i,j)]
 			elif longest_path_map[i][j] == max_path:
 				starting_points.append((i,j))
-	print "Starting points found: " + str(starting_points)
 	print "Maximum height: " + str(max_path)
+	print "Starting points found: " + str(starting_points)
 	print "Starting heights: " + str([ski_map[i][j] for i,j in starting_points])
 	print "Ending heights: " + str([ending_point_map[i][j] for i,j in starting_points])
 	print "Maximum drop: " + str(max([ski_map[i][j] - ending_point_map[i][j] for i,j in starting_points]))
