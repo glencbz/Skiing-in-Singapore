@@ -52,6 +52,7 @@ def find_max(ski_map, longest_path_map, ending_point_map, i, j):
 	for neighbour in get_neighbours(ski_map, i, j):
 		new_i, new_j = neighbour[0] + i, neighbour[1] + j
 		if ski_map[new_i][new_j] < current_height:
+			# if there isn't already a value of the longest path for the neighbour, run find_max on that point
 			if longest_path_map[new_i][new_j] == 0:
 				find_max(ski_map, longest_path_map, ending_point_map, new_i, new_j)
 			if longest_path_map[new_i][new_j] > max_path:
