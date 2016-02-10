@@ -1,7 +1,3 @@
-def parse_input(input_str):
-	lines = input_str.split("\n")[1:]
-	return [map(lambda x: int(x), line.split(" ")) for line in lines]
-
 def read_file(file_name):
 	print "Loading map"
 	ski_map_file = open(file_name, "r")
