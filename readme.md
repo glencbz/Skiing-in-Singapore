@@ -29,20 +29,18 @@ end(0,1) = 1
 ```
 
 **Longest path**
-The main variable we are interested in is path(i,j), which is simply max(path(x,y)) + 1, where x,y is a neighbour to (i,j). This can be easily computed by considering path(x,y). 
-
-If (i,j) is higher than its neighbour, then there exists a path that starts at (i,j) and goes through that neighbour. The greatest possible length of this path would be the greatest length starting at the neighbour + the additional length of adding the point (i,j) to the path, i.e. a length of 1.
+If (i,j) is higher than its neighbour, then there exists a path that starts at (i,j) and goes through that neighbour. To find the longest path, one simply has to choose the largest of these values and add 1 to it.
 
 The formula is thus:
 ```
 path(i,j)	= 1						if there are no lower height neighbours of (i,j)
-			= max(path(x,y)) + 1 	where x,y are lower height neighbours of (i,j)
+			= max(path(x,y) + 1) 	where x,y are lower height neighbours of (i,j)
 ```
 
 The longest path in the map is simply the largest path(i,j) for any valid (i,j).
 
 **Ending point of path**
-Let's assume we have found a unique longest path that starts at (i,j) and that we know that it passes through neighbour i, k. The paths starting at (i,j) and i,k would naturally have the same ending point.
+Let's assume we have found a unique longest path that starts at (i,j) and that we know that it passes through neighbour (i,k). The paths starting at (i,j) and (i,k) would naturally have the same ending point.
 
 The complication here exists when there isn't a unique longest path e.g. a point has two neighbours with a longest path length of 1. In this case, we simply pick the lowest of these values. 
 
