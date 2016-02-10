@@ -85,8 +85,4 @@ def get_neighbours(ski_map, i, j):
 		neighbours.append((0,1))
 	return neighbours
 
-
-# update_algorithm(parse_input(ski_map))
-# max_algorithm(parse_input(ski_map))
 max_algorithm(read_file("ski_map.txt"))
-# update_algorithm(read_file("ski_map.txt"))

@@ -56,3 +56,9 @@ The two functions that solve the problem are max_algorithm() and find_max().
 
  - **find_max()**: finds path(i,j) and end(i,j) for a given point (i,j) recursively and stores them
  - **max_algorithm()**: iteratively calls find_max() over all points that were missed by the recursion and tracks the length of the longest paths (globally) and their ending heights
+
+For brevity, some of the parameters are omitted in the descriptions below.
+
+max_algorithm() attempts to compare path(i,j) for all (i,j), with the longest path value found so far. If the cached value is invalid, then path(i,j) has not been found yet and it calls find_max(i,j). The starting and ending points of the longest paths are stored so that they can be compared at the end.
+
+find_max(i,j) attempts to compare the longest path values of (i,j)'s lower height neighbours to find the largest one. If the cached value is invalid, then find_max() is first called on the neighbour before the comparison is done. find_max(i,j) also caches end(i,j) for easy retrieval and comparison.
