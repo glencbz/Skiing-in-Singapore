@@ -21,9 +21,9 @@ In the case of this map,
 2 3 1 6
 
 Neighbours of (0,1) = [(0,0), (0,2), (1,1)]
-height(0,1)					= 8
-path(0,1) 					= 5
-end(0,1) 						= 1
+height(0,1)			= 8
+path(0,1) 			= 5
+end(0,1) 			= 1
 ```
 
 **Longest path**
