@@ -1,10 +1,3 @@
-
-ski_map = """4 4 
-4 8 7 3
-2 6 9 3
-4 5 4 2
-2 3 1 6"""
-
 def parse_input(input_str):
 	lines = input_str.split("\n")[1:]
 	return [map(lambda x: int(x), line.split(" ")) for line in lines]
@@ -32,11 +25,6 @@ def max_algorithm(ski_map):
 				starting_points = [(i,j)]
 			elif longest_path_map[i][j] == max_path:
 				starting_points.append((i,j))
-	# answer_map = open("ending_max_algo.txt", "w")
-	# for path in ending_point_map:
-	# 	answer_map.write(" ".join([str(square) for square in path]))
-	# 	answer_map.write("\n")
-	# answer_map.close()
 	print "Starting points found: " + str(starting_points)
 	print "Maximum height: " + str(max_path)
 	print "Starting heights: " + str([ski_map[i][j] for i,j in starting_points])
